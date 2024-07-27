@@ -1909,7 +1909,9 @@ if (!function_exists('PHPUnit\Framework\assertStringContainsStringIgnoringLineEn
      */
     function assertStringContainsStringIgnoringLineEndings(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringContainsStringIgnoringLineEndings(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringContainsStringIgnoringLineEndings(...$args);
     }
 }
 
@@ -1925,7 +1927,9 @@ if (!function_exists('PHPUnit\Framework\assertStringEqualsStringIgnoringLineEndi
      */
     function assertStringEqualsStringIgnoringLineEndings(string $expected, string $actual, string $message = ''): void
     {
-        Assert::assertStringEqualsStringIgnoringLineEndings(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringEqualsStringIgnoringLineEndings(...$args);
     }
 }
 
@@ -1941,7 +1945,9 @@ if (!function_exists('PHPUnit\Framework\assertFileMatchesFormat')) {
      */
     function assertFileMatchesFormat(string $format, string $actualFile, string $message = ''): void
     {
-        Assert::assertFileMatchesFormat(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertFileMatchesFormat(...$args);
     }
 }
 
@@ -1957,7 +1963,9 @@ if (!function_exists('PHPUnit\Framework\assertFileMatchesFormatFile')) {
      */
     function assertFileMatchesFormatFile(string $formatFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertFileMatchesFormatFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertFileMatchesFormatFile(...$args);
     }
 }
 
@@ -1973,7 +1981,9 @@ if (!function_exists('PHPUnit\Framework\assertStringMatchesFormat')) {
      */
     function assertStringMatchesFormat(string $format, string $string, string $message = ''): void
     {
-        Assert::assertStringMatchesFormat(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringMatchesFormat(...$args);
     }
 }
 
@@ -1991,7 +2001,9 @@ if (!function_exists('PHPUnit\Framework\assertStringNotMatchesFormat')) {
      */
     function assertStringNotMatchesFormat(string $format, string $string, string $message = ''): void
     {
-        Assert::assertStringNotMatchesFormat(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringNotMatchesFormat(...$args);
     }
 }
 
@@ -2007,7 +2019,9 @@ if (!function_exists('PHPUnit\Framework\assertStringMatchesFormatFile')) {
      */
     function assertStringMatchesFormatFile(string $formatFile, string $string, string $message = ''): void
     {
-        Assert::assertStringMatchesFormatFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringMatchesFormatFile(...$args);
     }
 }
 
@@ -2025,7 +2039,9 @@ if (!function_exists('PHPUnit\Framework\assertStringNotMatchesFormatFile')) {
      */
     function assertStringNotMatchesFormatFile(string $formatFile, string $string, string $message = ''): void
     {
-        Assert::assertStringNotMatchesFormatFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringNotMatchesFormatFile(...$args);
     }
 }
 
@@ -2044,7 +2060,9 @@ if (!function_exists('PHPUnit\Framework\assertStringStartsWith')) {
      */
     function assertStringStartsWith(string $prefix, string $string, string $message = ''): void
     {
-        Assert::assertStringStartsWith(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringStartsWith(...$args);
     }
 }
 
@@ -2063,7 +2081,9 @@ if (!function_exists('PHPUnit\Framework\assertStringStartsNotWith')) {
      */
     function assertStringStartsNotWith(string $prefix, string $string, string $message = ''): void
     {
-        Assert::assertStringStartsNotWith(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringStartsNotWith(...$args);
     }
 }
 
@@ -2077,7 +2097,9 @@ if (!function_exists('PHPUnit\Framework\assertStringContainsString')) {
      */
     function assertStringContainsString(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringContainsString(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringContainsString(...$args);
     }
 }
 
@@ -2091,7 +2113,9 @@ if (!function_exists('PHPUnit\Framework\assertStringContainsStringIgnoringCase')
      */
     function assertStringContainsStringIgnoringCase(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringContainsStringIgnoringCase(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringContainsStringIgnoringCase(...$args);
     }
 }
 
@@ -2105,7 +2129,9 @@ if (!function_exists('PHPUnit\Framework\assertStringNotContainsString')) {
      */
     function assertStringNotContainsString(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringNotContainsString(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringNotContainsString(...$args);
     }
 }
 
@@ -2119,7 +2145,9 @@ if (!function_exists('PHPUnit\Framework\assertStringNotContainsStringIgnoringCas
      */
     function assertStringNotContainsStringIgnoringCase(string $needle, string $haystack, string $message = ''): void
     {
-        Assert::assertStringNotContainsStringIgnoringCase(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringNotContainsStringIgnoringCase(...$args);
     }
 }
 
@@ -2138,7 +2166,9 @@ if (!function_exists('PHPUnit\Framework\assertStringEndsWith')) {
      */
     function assertStringEndsWith(string $suffix, string $string, string $message = ''): void
     {
-        Assert::assertStringEndsWith(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringEndsWith(...$args);
     }
 }
 
@@ -2157,7 +2187,9 @@ if (!function_exists('PHPUnit\Framework\assertStringEndsNotWith')) {
      */
     function assertStringEndsNotWith(string $suffix, string $string, string $message = ''): void
     {
-        Assert::assertStringEndsNotWith(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertStringEndsNotWith(...$args);
     }
 }
 
@@ -2175,7 +2207,9 @@ if (!function_exists('PHPUnit\Framework\assertXmlFileEqualsXmlFile')) {
      */
     function assertXmlFileEqualsXmlFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertXmlFileEqualsXmlFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertXmlFileEqualsXmlFile(...$args);
     }
 }
 
@@ -2192,7 +2226,9 @@ if (!function_exists('PHPUnit\Framework\assertXmlFileNotEqualsXmlFile')) {
      */
     function assertXmlFileNotEqualsXmlFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertXmlFileNotEqualsXmlFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertXmlFileNotEqualsXmlFile(...$args);
     }
 }
 
@@ -2209,7 +2245,9 @@ if (!function_exists('PHPUnit\Framework\assertXmlStringEqualsXmlFile')) {
      */
     function assertXmlStringEqualsXmlFile(string $expectedFile, string $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringEqualsXmlFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertXmlStringEqualsXmlFile(...$args);
     }
 }
 
@@ -2226,7 +2264,9 @@ if (!function_exists('PHPUnit\Framework\assertXmlStringNotEqualsXmlFile')) {
      */
     function assertXmlStringNotEqualsXmlFile(string $expectedFile, string $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringNotEqualsXmlFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertXmlStringNotEqualsXmlFile(...$args);
     }
 }
 
@@ -2243,7 +2283,9 @@ if (!function_exists('PHPUnit\Framework\assertXmlStringEqualsXmlString')) {
      */
     function assertXmlStringEqualsXmlString(string $expectedXml, string $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringEqualsXmlString(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertXmlStringEqualsXmlString(...$args);
     }
 }
 
@@ -2260,7 +2302,9 @@ if (!function_exists('PHPUnit\Framework\assertXmlStringNotEqualsXmlString')) {
      */
     function assertXmlStringNotEqualsXmlString(string $expectedXml, string $actualXml, string $message = ''): void
     {
-        Assert::assertXmlStringNotEqualsXmlString(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertXmlStringNotEqualsXmlString(...$args);
     }
 }
 
