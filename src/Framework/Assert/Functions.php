@@ -1363,7 +1363,9 @@ if (!function_exists('PHPUnit\Framework\assertNotInstanceOf')) {
      */
     function assertNotInstanceOf(string $expected, mixed $actual, string $message = ''): void
     {
-        Assert::assertNotInstanceOf(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertNotInstanceOf(...$args);
     }
 }
 
@@ -1835,7 +1837,9 @@ if (!function_exists('PHPUnit\Framework\assertMatchesRegularExpression')) {
      */
     function assertMatchesRegularExpression(string $pattern, string $string, string $message = ''): void
     {
-        Assert::assertMatchesRegularExpression(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertMatchesRegularExpression(...$args);
     }
 }
 
@@ -1851,7 +1855,9 @@ if (!function_exists('PHPUnit\Framework\assertDoesNotMatchRegularExpression')) {
      */
     function assertDoesNotMatchRegularExpression(string $pattern, string $string, string $message = ''): void
     {
-        Assert::assertDoesNotMatchRegularExpression(...func_get_args());
+        /** @var array{0: non-empty-string, 1: non-empty-string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertDoesNotMatchRegularExpression(...$args);
     }
 }
 
@@ -1873,7 +1879,9 @@ if (!function_exists('PHPUnit\Framework\assertSameSize')) {
      */
     function assertSameSize(Countable|iterable $expected, Countable|iterable $actual, string $message = ''): void
     {
-        Assert::assertSameSize(...func_get_args());
+        /** @var array{0: Countable|iterable, 1: Countable|iterable, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertSameSize(...$args);
     }
 }
 
@@ -1895,7 +1903,9 @@ if (!function_exists('PHPUnit\Framework\assertNotSameSize')) {
      */
     function assertNotSameSize(Countable|iterable $expected, Countable|iterable $actual, string $message = ''): void
     {
-        Assert::assertNotSameSize(...func_get_args());
+        /** @var array{0: Countable|iterable, 1: Countable|iterable, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertNotSameSize(...$args);
     }
 }
 
