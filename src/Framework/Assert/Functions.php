@@ -2292,7 +2292,9 @@ if (!function_exists('PHPUnit\Framework\assertJson')) {
      */
     function assertJson(string $actual, string $message = ''): void
     {
-        Assert::assertJson(...func_get_args());
+        /** @var array{0: string, 1: string} $args */
+        $args = func_get_args();
+        Assert::assertJson(...$args);
     }
 }
 
@@ -2308,7 +2310,9 @@ if (!function_exists('PHPUnit\Framework\assertJsonStringEqualsJsonString')) {
      */
     function assertJsonStringEqualsJsonString(string $expectedJson, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringEqualsJsonString(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertJsonStringEqualsJsonString(...$args);
     }
 }
 
@@ -2324,7 +2328,9 @@ if (!function_exists('PHPUnit\Framework\assertJsonStringNotEqualsJsonString')) {
      */
     function assertJsonStringNotEqualsJsonString(string $expectedJson, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringNotEqualsJsonString(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertJsonStringNotEqualsJsonString(...$args);
     }
 }
 
@@ -2340,7 +2346,9 @@ if (!function_exists('PHPUnit\Framework\assertJsonStringEqualsJsonFile')) {
      */
     function assertJsonStringEqualsJsonFile(string $expectedFile, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringEqualsJsonFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertJsonStringEqualsJsonFile(...$args);
     }
 }
 
@@ -2356,7 +2364,9 @@ if (!function_exists('PHPUnit\Framework\assertJsonStringNotEqualsJsonFile')) {
      */
     function assertJsonStringNotEqualsJsonFile(string $expectedFile, string $actualJson, string $message = ''): void
     {
-        Assert::assertJsonStringNotEqualsJsonFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertJsonStringNotEqualsJsonFile(...$args);
     }
 }
 
@@ -2372,7 +2382,9 @@ if (!function_exists('PHPUnit\Framework\assertJsonFileEqualsJsonFile')) {
      */
     function assertJsonFileEqualsJsonFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertJsonFileEqualsJsonFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertJsonFileEqualsJsonFile(...$args);
     }
 }
 
@@ -2388,7 +2400,9 @@ if (!function_exists('PHPUnit\Framework\assertJsonFileNotEqualsJsonFile')) {
      */
     function assertJsonFileNotEqualsJsonFile(string $expectedFile, string $actualFile, string $message = ''): void
     {
-        Assert::assertJsonFileNotEqualsJsonFile(...func_get_args());
+        /** @var array{0: string, 1: string, 2: string} $args */
+        $args = func_get_args();
+        Assert::assertJsonFileNotEqualsJsonFile(...$args);
     }
 }
 
@@ -2409,7 +2423,9 @@ if (!function_exists('PHPUnit\Framework\logicalOr')) {
 if (!function_exists('PHPUnit\Framework\logicalNot')) {
     function logicalNot(Constraint $constraint): LogicalNot
     {
-        return Assert::logicalNot(...func_get_args());
+        /** @var array{0: Constraint} $args */
+        $args = func_get_args();
+        return Assert::logicalNot(...$args);
     }
 }
 
@@ -2493,21 +2509,27 @@ if (!function_exists('PHPUnit\Framework\containsIdentical')) {
 if (!function_exists('PHPUnit\Framework\containsOnly')) {
     function containsOnly(string $type): TraversableContainsOnly
     {
-        return Assert::containsOnly(...func_get_args());
+        /** @var array{0: 'array'|'bool'|'boolean'|'callable'|'double'|'float'|'int'|'integer'|'iterable'|'null'|'numeric'|'object'|'real'|'resource (closed)'|'resource'|'scalar'|'string'} $args */
+        $args = func_get_args();
+        return Assert::containsOnly(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\containsOnlyInstancesOf')) {
     function containsOnlyInstancesOf(string $className): TraversableContainsOnly
     {
-        return Assert::containsOnlyInstancesOf(...func_get_args());
+        /** @var array{0: class-string} $args */
+        $args = func_get_args();
+        return Assert::containsOnlyInstancesOf(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\arrayHasKey')) {
     function arrayHasKey(int|string $key): ArrayHasKey
     {
-        return Assert::arrayHasKey(...func_get_args());
+        /** @var array{0: int|string} $args */
+        $args = func_get_args();
+        return Assert::arrayHasKey(...$args);
     }
 }
 
@@ -2605,14 +2627,18 @@ if (!function_exists('PHPUnit\Framework\identicalTo')) {
 if (!function_exists('PHPUnit\Framework\isInstanceOf')) {
     function isInstanceOf(string $className): IsInstanceOf
     {
-        return Assert::isInstanceOf(...func_get_args());
+        /** @var array{0: string} $args */
+        $args = func_get_args();
+        return Assert::isInstanceOf(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\isType')) {
     function isType(string $type): IsType
     {
-        return Assert::isType(...func_get_args());
+        /** @var array{0: 'array'|'bool'|'boolean'|'callable'|'double'|'float'|'int'|'integer'|'iterable'|'null'|'numeric'|'object'|'real'|'resource (closed)'|'resource'|'scalar'|'string'} $args */
+        $args = func_get_args();
+        return Assert::isType(...$args);
     }
 }
 
@@ -2633,56 +2659,72 @@ if (!function_exists('PHPUnit\Framework\lessThanOrEqual')) {
 if (!function_exists('PHPUnit\Framework\matchesRegularExpression')) {
     function matchesRegularExpression(string $pattern): RegularExpression
     {
-        return Assert::matchesRegularExpression(...func_get_args());
+        /** @var array{0: string} $args */
+        $args = func_get_args();
+        return Assert::matchesRegularExpression(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\matches')) {
     function matches(string $string): StringMatchesFormatDescription
     {
-        return Assert::matches(...func_get_args());
+        /** @var array{0: string} $args */
+        $args = func_get_args();
+        return Assert::matches(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\stringStartsWith')) {
     function stringStartsWith(string $prefix): StringStartsWith
     {
-        return Assert::stringStartsWith(...func_get_args());
+        /** @var array{0: non-empty-string} $args */
+        $args = func_get_args();
+        return Assert::stringStartsWith(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\stringContains')) {
     function stringContains(string $string, bool $case = true): StringContains
     {
-        return Assert::stringContains(...func_get_args());
+        /** @var array{0: string} $args */
+        $args = func_get_args();
+        return Assert::stringContains(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\stringEndsWith')) {
     function stringEndsWith(string $suffix): StringEndsWith
     {
-        return Assert::stringEndsWith(...func_get_args());
+        /** @var array{0: non-empty-string} $args */
+        $args = func_get_args();
+        return Assert::stringEndsWith(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\stringEqualsStringIgnoringLineEndings')) {
     function stringEqualsStringIgnoringLineEndings(string $string): StringEqualsStringIgnoringLineEndings
     {
-        return Assert::stringEqualsStringIgnoringLineEndings(...func_get_args());
+        /** @var array{0: string} $args */
+        $args = func_get_args();
+        return Assert::stringEqualsStringIgnoringLineEndings(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\countOf')) {
     function countOf(int $count): Count
     {
-        return Assert::countOf(...func_get_args());
+        /** @var array{0: int} $args */
+        $args = func_get_args();
+        return Assert::countOf(...$args);
     }
 }
 
 if (!function_exists('PHPUnit\Framework\objectEquals')) {
     function objectEquals(object $object, string $method = 'equals'): ObjectEquals
     {
-        return Assert::objectEquals(...func_get_args());
+        /** @var array{0: object, 1: string} $args */
+        $args = func_get_args();
+        return Assert::objectEquals(...$args);
     }
 }
 
